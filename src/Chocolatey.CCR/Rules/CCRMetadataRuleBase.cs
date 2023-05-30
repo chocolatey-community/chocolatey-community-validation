@@ -18,7 +18,7 @@ namespace Chocolatey.CCR.Rules
                 }
                 else
                 {
-                    var helpUrl = $"https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/{id!.ToLowerInvariant()}";
+                    var helpUrl = $"https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/{id!.ToLowerInvariant()}";
                     yield return new ImmutableRule(severity, id, summary, helpUrl);
                 }
             }

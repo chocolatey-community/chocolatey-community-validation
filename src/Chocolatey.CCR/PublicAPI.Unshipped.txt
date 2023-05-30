@@ -6,4 +6,7 @@ Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule.RegisterDependencies
 Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule.register_dependencies(chocolatey.infrastructure.app.registration.IContainerRegistrator! registrator, chocolatey.infrastructure.app.configuration.ChocolateyConfiguration? configuration) -> void
 Chocolatey.CCR.Rules.CCRMetadataRuleBase
 Chocolatey.CCR.Rules.CCRMetadataRuleBase.CCRMetadataRuleBase() -> void
+Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule
+Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.CopyrightCharacterCountTooLowRule() -> void
+override Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override sealed Chocolatey.CCR.Rules.CCRMetadataRuleBase.GetRules() -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.ImmutableRule>!

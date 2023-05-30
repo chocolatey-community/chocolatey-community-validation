@@ -11,6 +11,7 @@
     <Deterministic>True</Deterministic>
     <OutputType>Exe</OutputType>
     <Configurations>Debug;Release;DebugOfficial;ReleaseOfficial</Configurations>
+    <DisableFastUpToDateCheck>True</DisableFastUpToDateCheck>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\SolutionVersion.cs" Link="SolutionVersion.cs" />
@@ -39,7 +40,11 @@
     <PropertyGroup>
       <DependencyDir>$(SolutionDir)\Chocolatey.CCR\bin\$(Configuration)\$(TargetFramework)</DependencyDir>
     </PropertyGroup>
+    <ItemGroup>
+      <FilesToDelete Include="$(Outdir)extensions\chocolatey-ccr\*" />
+    </ItemGroup>
     <MakeDir Directories="$(OutputDir)extensions\Chocolatey.CCR" Condition="!Exists('$(OutDir)extensions\chocolatey-ccr')" />
+    <Delete Files="@(FilesToDelete)" />
     <Copy SourceFiles="$(DependencyDir)\chocolatey-ccr.dll;$(DependencyDir)\chocolatey-ccr.pdb" DestinationFolder="$(OutDir)extensions\chocolatey-ccr" />
   </Target>
 </Project>
