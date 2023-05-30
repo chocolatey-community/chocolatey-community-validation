@@ -1,0 +1,9 @@
+#nullable enable
+abstract Chocolatey.CCR.Rules.CCRMetadataRuleBase.GetRulesInformation() -> System.Collections.Generic.IEnumerable<(chocolatey.infrastructure.rules.RuleType severity, string? id, string! summary)>!
+Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule
+Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule.ChocolateyCCRRegistrationModule() -> void
+Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule.RegisterDependencies(chocolatey.infrastructure.app.registration.IContainerRegistrator! registrator, chocolatey.infrastructure.app.configuration.ChocolateyConfiguration? configuration) -> void
+Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule.register_dependencies(chocolatey.infrastructure.app.registration.IContainerRegistrator! registrator, chocolatey.infrastructure.app.configuration.ChocolateyConfiguration? configuration) -> void
+Chocolatey.CCR.Rules.CCRMetadataRuleBase
+Chocolatey.CCR.Rules.CCRMetadataRuleBase.CCRMetadataRuleBase() -> void
+override sealed Chocolatey.CCR.Rules.CCRMetadataRuleBase.GetRules() -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.ImmutableRule>!

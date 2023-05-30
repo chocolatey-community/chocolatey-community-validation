@@ -1,0 +1,10 @@
+{
+    "profiles": {
+        "Launch Extension": {
+            "commandName": "Executable",
+            "executablePath": ".\\choco.exe",
+            "commandLineArgs": "",
+            "workingDirectory": "$(OutDir)"
+        }
+    }
+}
