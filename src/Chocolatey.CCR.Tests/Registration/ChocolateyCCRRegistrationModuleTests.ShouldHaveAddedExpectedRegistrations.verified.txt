@@ -1,0 +1,8 @@
+﻿{
+  RegisteredServices: {
+    chocolatey.infrastructure.rules.IMetadataRule: [
+      Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule
+    ]
+  },
+  RegistrationFailed: false
+}
