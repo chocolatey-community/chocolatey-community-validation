@@ -5,6 +5,8 @@ namespace Chocolatey.CCR.Registration
     using chocolatey.infrastructure.app.configuration;
     using chocolatey.infrastructure.app.registration;
     using chocolatey.infrastructure.rules;
+    using chocolatey.infrastructure.validations;
+    using Chocolatey.CCR.Validations;
 
     public sealed class ChocolateyCCRRegistrationModule : IExtensionModule
     {
@@ -21,6 +23,7 @@ namespace Chocolatey.CCR.Registration
                 .ToArray();
 
             registrator.RegisterService<IMetadataRule>(rules);
+            registrator.RegisterService<IValidation, CommunityRepositoryPushValidation>();
         }
 
         public void register_dependencies(IContainerRegistrator registrator, ChocolateyConfiguration? configuration)

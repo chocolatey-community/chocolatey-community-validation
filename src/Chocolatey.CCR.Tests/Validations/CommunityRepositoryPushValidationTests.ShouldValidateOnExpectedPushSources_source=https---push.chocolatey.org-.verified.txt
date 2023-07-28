@@ -1,0 +1,112 @@
+﻿[
+  {
+    Status: Error,
+    Message: I am an error without ID and Help URL.,
+    ExitCode: 1
+  },
+  {
+    Status: Error,
+    Message: ID2: I am an error with an ID and without an Help URL.,
+    ExitCode: 1
+  },
+  {
+    Status: Error,
+    Message:
+I am an error without an ID and with a Help URL.
+   See https://docs.failures.com/.,
+    ExitCode: 1
+  },
+  {
+    Status: Error,
+    Message:
+ID4: I am an error with an ID and a Help URL.
+   See https://docs.failures.com/.,
+    ExitCode: 1
+  },
+  {
+    Status: Warning,
+    Message: I am a warning without ID and Help URL.
+  },
+  {
+    Status: Warning,
+    Message: ID6: I am a warning with an ID and without an Help URL.
+  },
+  {
+    Status: Warning,
+    Message:
+I am a warning without an ID and with a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Warning,
+    Message:
+ID8: I am a warning with an ID and a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Checked,
+    Message: I am information without ID and Help URL.
+  },
+  {
+    Status: Checked,
+    Message: ID10: I am information with an ID and without an Help URL.
+  },
+  {
+    Status: Checked,
+    Message:
+I am information without an ID and with a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Checked,
+    Message:
+ID12: I am information with an ID and a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Checked,
+    Message: I am a note without ID and Help URL.
+  },
+  {
+    Status: Checked,
+    Message: ID14: I am a note with an ID and without an Help URL.
+  },
+  {
+    Status: Checked,
+    Message:
+I am a note without an ID and with a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Checked,
+    Message:
+ID16: I am a note with an ID and a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Checked,
+    Message:
+ID12: I am information with an ID and a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Success,
+    Message: I am nothing without an ID and Help URL.
+  },
+  {
+    Status: Success,
+    Message: ID18: I am nothing with an ID and without an Help URL.
+  },
+  {
+    Status: Success,
+    Message:
+I am nothing without an ID and with a Help URL.
+   See https://docs.failures.com/.
+  },
+  {
+    Status: Success,
+    Message:
+ID16: I am nothing with an ID and a Help URL.
+   See https://docs.failures.com/.
+  }
+]

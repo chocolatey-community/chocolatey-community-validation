@@ -10,9 +10,10 @@ namespace Chocolatey.CCR.Tests.Registration
     using NUnit.Framework;
     using static VerifyNUnit.Verifier;
 
+    [Category("Registration")]
     public class ChocolateyCCRRegistrationModuleTests
     {
-        [Test, Category("Registration")]
+        [Test]
         public async Task ShouldHaveAddedExpectedRegistrations()
         {
             var module = new ChocolateyCCRRegistrationModule();
@@ -21,6 +22,16 @@ namespace Chocolatey.CCR.Tests.Registration
             module.RegisterDependencies(registrator, new chocolatey.infrastructure.app.configuration.ChocolateyConfiguration());
 
             await Verify(registrator);
+        }
+
+        [Test]
+        public Task ShouldHaveAddedExpectedRegistrationsInLegacyMethod()
+        {
+            var module = new ChocolateyCCRRegistrationModule();
+            var registrator = new ContainerTestRegistrator();
+            module.register_dependencies(registrator, new chocolatey.infrastructure.app.configuration.ChocolateyConfiguration());
+
+            return Verify(registrator);
         }
 
         private class ContainerTestRegistrator : IContainerRegistrator
@@ -76,7 +87,9 @@ namespace Chocolatey.CCR.Tests.Registration
 
             public void RegisterService<TService, TImplementation>(bool transient = false) where TImplementation : class, TService
             {
-                throw new NotImplementedException();
+                var serviceList = RegisteredServices.GetOrAdd(typeof(TService).FullName, (_) => new List<string>());
+
+                serviceList.Add(typeof(TImplementation).FullName);
             }
 
             public void RegisterService<TService>(params Type[] types)
