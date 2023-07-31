@@ -13,8 +13,11 @@ trim_trailing_whitespace = true
 [*.{bash,fish,sh,zsh}]
 end_of_line = lf
 
-[*.{bat,cmd,ps1}]
+[*.ps1]
 charset = utf-8-bom
+
+[*.{bat,cmd}]
+charset = latin1
 
 [*.md]
 indent_size = 2

@@ -13,6 +13,7 @@ To build this project, the following requirements must be met.
 1. NET 4.8 installed
 2. Visual Studio 2022 (2019 and 2017 may work, but is untested)
 3. Ability to Compile Debug version of Chocolatey CLI
+4. Microsoft Visual Studio Code (for non C# source files)
 
 ### Building and Debugging
 
