@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-ccr.extension</id>
+    <version>0.0.1</version>
+    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>Chocolatey Software</owners>
+    <title>Chocolatey Community Repository Extension</title>
+    <authors>Chocolatey Software</authors>
+    <!-- This needs to be a different URL once we have a public page for the extension -->
+    <projectUrl>https://community.chocolatey.org</projectUrl>
+    <!-- Should there be a specific icon for the image. Maybe one used for all official extensions. -->
+    <iconUrl>https://chocolatey.org/assets/images/nupkg/chocolateyicon.png</iconUrl>
+    <copyright>(c) 2023 Chocolatey Software, Inc</copyright>
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <docsUrl>https://docs.chocolatey.org</docsUrl>
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>chocolatey-ccr.extension extension validation rules community-repository</tags>
+    <summary>Extension implementing rules and validation for Chocolatey Community Repository packages</summary>
+    <description>Chocolatey Community Repository Extension - Bringing package validation to the console.
+
+The purpose of this extension is to provide validation and rules that needs to be adhered to when creating packages for the Chocolatey Community Repository.
+The implemented rules will run when creating a package, and when pushing a package to Chocolatey Community Repository.
+
+### Notes
+
+- Only metadata/nuspec rules are currently supported.
+</description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+
+    <dependencies>
+      <!-- We only specify the minimum version, as even breaking changes in Chocolatey CLI is unlikely to relate to the usages in this package -->
+      <dependency id="chocolatey" version="2.0.0" />
+    </dependencies>
+  </metadata>
+</package>

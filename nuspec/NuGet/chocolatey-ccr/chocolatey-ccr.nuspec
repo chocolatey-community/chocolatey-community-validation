@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>chocolatey-ccr</id>
+    <title>Chocolatey Community Repository Extension</title>
+    <version>0.0.1</version>
+    <authors>Chocolatey Software, Inc.</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>-->
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://community.chocolatey.org</projectUrl>
+    <tags>chocolatey-ccr.extension extension validation rules community-repository</tags>
+    <summary>Extension implementing rules and validation for Chocolatey Community Repository packages</summary>
+    <description>Chocolatey Community Repository Extension - Bringing package validation to the console.
+
+The purpose of this extension is to provide validation and rules that needs to be adhered to when creating packages for the Chocolatey Community Repository.
+The implemented rules will run when creating a package, and when pushing a package to Chocolatey Community Repository.
+</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <repository type="git" url="https://gitlab.com/chocolatey/collaborators/chocolatey-ccr-extension.git" />
+    <copyright>(c) 2023 Chocolatey Software, Inc</copyright>
+    <dependencies>
+      <group targetFramework="net48">
+        <dependency id="chocolatey.lib" version="2.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
