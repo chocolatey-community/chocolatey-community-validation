@@ -8,9 +8,12 @@ Chocolatey.CCR.Rules.CCRMetadataRuleBase
 Chocolatey.CCR.Rules.CCRMetadataRuleBase.CCRMetadataRuleBase() -> void
 Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule
 Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.CopyrightCharacterCountTooLowRule() -> void
+Chocolatey.CCR.Rules.DescriptionElementRules
+Chocolatey.CCR.Rules.DescriptionElementRules.DescriptionElementRules() -> void
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.CommunityRepositoryPushValidation(chocolatey.infrastructure.services.IRuleService! ruleService) -> void
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.Validate(chocolatey.infrastructure.app.configuration.ChocolateyConfiguration! config) -> System.Collections.Generic.ICollection<chocolatey.infrastructure.validations.ValidationResult!>!
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.validate(chocolatey.infrastructure.app.configuration.ChocolateyConfiguration! config) -> System.Collections.Generic.ICollection<chocolatey.infrastructure.validations.ValidationResult!>!
 override Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.CCR.Rules.DescriptionElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override sealed Chocolatey.CCR.Rules.CCRMetadataRuleBase.GetRules() -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.ImmutableRule>!
