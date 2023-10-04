@@ -1,4 +1,4 @@
-﻿namespace Chocolatey.CCR.Console
+namespace Chocolatey.CCR.Console
 {
     using System;
 
