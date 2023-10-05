@@ -1,18 +1,66 @@
 namespace Chocolatey.CCR.Tests.Rules
 {
+    using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
     using chocolatey.infrastructure.rules;
     using Chocolatey.CCR.Rules;
     using FluentAssertions;
+    using NUnit.Framework;
     using static VerifyNUnit.Verifier;
 
     public abstract class RuleTestBase<TestRule>
         where TestRule : CCRMetadataRuleBase, new()
     {
         protected readonly TestRule Rule = new TestRule();
+
+        public static IEnumerable EmptyTestValues
+        {
+            get
+            {
+                yield return null;
+                yield return string.Empty;
+                yield return "    ";
+                yield return "\r\n  \n";
+            }
+        }
+
+        public static IEnumerable InvalidUrlValues
+        {
+            get
+            {
+                yield return "This is not a URL";
+                yield return "http:/www.chocolatey.org";
+            }
+        }
+
+        public static IEnumerable ValidUrlValues
+        {
+            get
+            {
+                yield return "http://www.chocolatey.org";
+                yield return "https://community.chocolatey.org";
+                yield return "https://test.com:8081/some-url";
+            }
+        }
+
+        [Test]
+        public async Task ShouldReturnAvailableRulesForImplementation()
+        {
+            await Verify(Rule.GetAvailableRules());
+        }
+
+        [Test]
+        public void ShouldThrowArgumentNullExceptionIfReaderIsNull()
+        {
+            Action act = () => Rule.Validate(null!).ToList();
+
+            act.Should().Throw<ArgumentNullException>().WithParameterName("reader");
+        }
 
         protected async Task<IEnumerable<RuleResult>> GetRuleResults(string nuspecContent, Encoding encoding)
         {
