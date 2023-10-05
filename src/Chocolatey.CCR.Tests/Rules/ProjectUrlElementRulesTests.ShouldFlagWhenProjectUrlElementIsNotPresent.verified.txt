@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0009,
+    Id: CPMR0009,
+    Message: A project URL for the software is either missing or empty.,
+    Severity: Error
+  }
+]

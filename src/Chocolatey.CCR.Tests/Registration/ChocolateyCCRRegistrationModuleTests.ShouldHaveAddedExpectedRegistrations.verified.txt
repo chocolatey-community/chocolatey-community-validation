@@ -2,7 +2,8 @@
   RegisteredServices: {
     chocolatey.infrastructure.rules.IMetadataRule: [
       Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule,
-      Chocolatey.CCR.Rules.DescriptionElementRules
+      Chocolatey.CCR.Rules.DescriptionElementRules,
+      Chocolatey.CCR.Rules.ProjectUrlElementRules
     ],
     chocolatey.infrastructure.validations.IValidation: [
       Chocolatey.CCR.Validations.CommunityRepositoryPushValidation
