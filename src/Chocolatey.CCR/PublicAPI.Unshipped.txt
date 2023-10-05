@@ -10,6 +10,8 @@ Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule
 Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.CopyrightCharacterCountTooLowRule() -> void
 Chocolatey.CCR.Rules.DescriptionElementRules
 Chocolatey.CCR.Rules.DescriptionElementRules.DescriptionElementRules() -> void
+Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules
+Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules.RequireLicenseAcceptanceElementRules() -> void
 Chocolatey.CCR.Rules.DependenciesElementRules
 Chocolatey.CCR.Rules.DependenciesElementRules.DependenciesElementRules() -> void
 Chocolatey.CCR.Rules.TagsMissingOrEmptyRule
@@ -22,6 +24,7 @@ Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.Validate(chocolatey
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.validate(chocolatey.infrastructure.app.configuration.ChocolateyConfiguration! config) -> System.Collections.Generic.ICollection<chocolatey.infrastructure.validations.ValidationResult!>!
 override Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.DescriptionElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.DependenciesElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.TagsMissingOrEmptyRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.ProjectUrlElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!

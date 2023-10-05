@@ -5,6 +5,7 @@
       Chocolatey.CCR.Rules.DependenciesElementRules,
       Chocolatey.CCR.Rules.DescriptionElementRules,
       Chocolatey.CCR.Rules.ProjectUrlElementRules,
+      Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules,
       Chocolatey.CCR.Rules.TagsMissingOrEmptyRule
     ],
     chocolatey.infrastructure.validations.IValidation: [
