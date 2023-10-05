@@ -16,13 +16,13 @@ To build this project, the following requirements must be met.
 
 ### Building and Debugging
 
-Before being able to built the project through Visual Studio and to debug the project, it is required to run the script `Get-ChocoDebugLibraries.ps1` first.
-Running this script will take care of the necessary pre-requisite steps to be able to build and debug the project.
+Before being able to build the project through Visual Studio and to debug the project, it is required to run the script `Get-ChocoDebugLibraries.ps1` first.
+Running this script will take care of the necessary prerequisite steps to be able to build and debug the project.
 The steps to follow in this case is:
 
 There are two options to be able to get the debug version of Chocolatey CLI.
 
-1. The first option is to clone the Chocolatey CLI project to a specific location and reuse these location.
+1. The first option is to clone the Chocolatey CLI project to a specific location and reuse this location.
   a. Clone the [`chocolatey/choco`](https://github.com/chocolatey/choco) repository to your preferred location.
   b. Run `.\Get-ChocoDebugLibraries.ps1 -ChocoSourceLocation <PATH_TO_SOURCE_ROOT>` (`ChocoSourceLocation` may be defined as the environment variable `CHOCO_SOURCE_LOCATION`)
 2. The second option is to let the debug script clone the necessary repository, and check out the referenced tag. (**NOTE: It is very important you do not have the environment variable `CHOCO_SOURCE_LOCATION` set in this case**).
@@ -31,4 +31,4 @@ There are two options to be able to get the debug version of Chocolatey CLI.
 ### Known Issues
 
 - During debugging there may be no information about the variables being used, this is due to referencing `chocolatey.dll` instead of `choco.exe`. It is uncertain of how to fix this problem at this time.
-- When implementing rules, it is required to use the full global namespace of `NuspecReader`. This is due to us not directly referencing any of the NuGet.Client libraries ourself.
+- When implementing rules, it is required to use the full global namespace of `NuspecReader`. This is due to us not directly referencing any of the `NuGet.Client` libraries ourselves.
