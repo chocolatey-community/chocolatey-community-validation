@@ -6,7 +6,7 @@ namespace Chocolatey.CCR.Rules
 
     public sealed class CopyrightCharacterCountTooLowRule : CCRMetadataRuleBase
     {
-        // We do not reference NuGet.Packaging ourself, as such we need to use the explicit global namespace.
+        // We do not reference NuGet. Packaging ourselves, as such we need to use the explicit global namespace.
         public override IEnumerable<RuleResult> Validate(global::NuGet.Packaging.NuspecReader reader)
         {
             if (reader is null)

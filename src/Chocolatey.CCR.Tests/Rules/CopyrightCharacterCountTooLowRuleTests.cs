@@ -12,9 +12,7 @@ namespace Chocolatey.CCR.Tests.Rules
     [Category("Requirements")]
     public class CopyrightCharacterCountTooLowRuleTests : RuleTestBase<CopyrightCharacterCountTooLowRule>
     {
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("            ")]
+        [TestCaseSource(nameof(EmptyTestValues))]
         [TestCase("a")]
         [TestCase("abc")]
         [TestCase("  uba   ")]
@@ -53,20 +51,6 @@ namespace Chocolatey.CCR.Tests.Rules
 </package>";
 
             await VerifyEmptyResults(testContent);
-        }
-
-        [Test]
-        public Task ShouldReturnAvailableRulesForImplementation()
-        {
-            return Verify(Rule.GetAvailableRules());
-        }
-
-        [Test]
-        public void ShouldThrowArgumentNullExceptionIfReaderIsNull()
-        {
-            Action act = () => Rule.Validate(null!).ToList();
-
-            act.Should().Throw<ArgumentNullException>().WithParameterName("reader");
         }
 
         private static string GetContent(string? copyright)

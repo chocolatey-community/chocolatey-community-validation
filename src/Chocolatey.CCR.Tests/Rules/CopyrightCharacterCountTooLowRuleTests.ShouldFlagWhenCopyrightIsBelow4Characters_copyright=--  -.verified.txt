@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0001,
+    Id: CPMR0001,
+    Message: Copyright Character Count Below 4 characters,
+    Severity: Error
+  }
+]
