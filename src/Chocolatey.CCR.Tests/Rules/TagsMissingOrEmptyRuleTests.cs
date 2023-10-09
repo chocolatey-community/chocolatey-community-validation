@@ -7,6 +7,16 @@ namespace Chocolatey.CCR.Tests.Rules
 
     public class TagsMissingOrEmptyRuleTests : RuleTestBase<TagsMissingOrEmptyRule>
     {
+        [TestCase(",taggie")]
+        [TestCase("taggie,")]
+        [TestCase("tag1, tag2 tag3")]
+        public async Task ShouldFlagCommaSeparatedTags(string tags)
+        {
+            var testContent = GetTestContent(tags);
+
+            await VerifyNuspec(testContent);
+        }
+
         [TestCaseSource(nameof(EmptyTestValues))]
         public async Task ShouldFlagEmptyTags(string tags)
         {
@@ -34,6 +44,14 @@ namespace Chocolatey.CCR.Tests.Rules
 </package>";
 
             await VerifyNuspec(testContent);
+        }
+
+        [Test]
+        public async Task ShouldNotFlagTagsNotContainingAComma()
+        {
+            var testContent = GetTestContent("awesome-tag with space separated");
+
+            await VerifyEmptyResults(testContent);
         }
 
         [Test]
