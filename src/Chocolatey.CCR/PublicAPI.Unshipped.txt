@@ -6,26 +6,26 @@ Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule.RegisterDependencies
 Chocolatey.CCR.Registration.ChocolateyCCRRegistrationModule.register_dependencies(chocolatey.infrastructure.app.registration.IContainerRegistrator! registrator, chocolatey.infrastructure.app.configuration.ChocolateyConfiguration? configuration) -> void
 Chocolatey.CCR.Rules.CCRMetadataRuleBase
 Chocolatey.CCR.Rules.CCRMetadataRuleBase.CCRMetadataRuleBase() -> void
-Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule
-Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.CopyrightCharacterCountTooLowRule() -> void
+Chocolatey.CCR.Rules.CopyrightElementRules
+Chocolatey.CCR.Rules.CopyrightElementRules.CopyrightElementRules() -> void
 Chocolatey.CCR.Rules.DescriptionElementRules
 Chocolatey.CCR.Rules.DescriptionElementRules.DescriptionElementRules() -> void
 Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules
 Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules.RequireLicenseAcceptanceElementRules() -> void
 Chocolatey.CCR.Rules.DependenciesElementRules
 Chocolatey.CCR.Rules.DependenciesElementRules.DependenciesElementRules() -> void
-Chocolatey.CCR.Rules.TagsMissingOrEmptyRule
-Chocolatey.CCR.Rules.TagsMissingOrEmptyRule.TagsMissingOrEmptyRule() -> void
 Chocolatey.CCR.Rules.ProjectUrlElementRules
 Chocolatey.CCR.Rules.ProjectUrlElementRules.ProjectUrlElementRules() -> void
+Chocolatey.CCR.Rules.TagsElementRules
+Chocolatey.CCR.Rules.TagsElementRules.TagsElementRules() -> void
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.CommunityRepositoryPushValidation(chocolatey.infrastructure.services.IRuleService! ruleService) -> void
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.Validate(chocolatey.infrastructure.app.configuration.ChocolateyConfiguration! config) -> System.Collections.Generic.ICollection<chocolatey.infrastructure.validations.ValidationResult!>!
 Chocolatey.CCR.Validations.CommunityRepositoryPushValidation.validate(chocolatey.infrastructure.app.configuration.ChocolateyConfiguration! config) -> System.Collections.Generic.ICollection<chocolatey.infrastructure.validations.ValidationResult!>!
-override Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.CCR.Rules.CopyrightElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.DescriptionElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.DependenciesElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
-override Chocolatey.CCR.Rules.TagsMissingOrEmptyRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.ProjectUrlElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.CCR.Rules.TagsElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override sealed Chocolatey.CCR.Rules.CCRMetadataRuleBase.GetRules() -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.ImmutableRule>!

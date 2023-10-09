@@ -10,7 +10,7 @@ namespace Chocolatey.CCR.Tests.Rules
     using static VerifyNUnit.Verifier;
 
     [Category("Requirements")]
-    public class CopyrightCharacterCountTooLowRuleTests : RuleTestBase<CopyrightCharacterCountTooLowRule>
+    public class CopyrightElementRulesTests : RuleTestBase<CopyrightElementRules>
     {
         [TestCaseSource(nameof(EmptyTestValues))]
         [TestCase("a")]

@@ -5,7 +5,8 @@ namespace Chocolatey.CCR.Tests.Rules
     using Chocolatey.CCR.Rules;
     using NUnit.Framework;
 
-    public class TagsMissingOrEmptyRuleTests : RuleTestBase<TagsMissingOrEmptyRule>
+    [Category("Requirements")]
+    public class TagsElementRulesTests : RuleTestBase<TagsElementRules>
     {
         [TestCase(",taggie")]
         [TestCase("taggie,")]

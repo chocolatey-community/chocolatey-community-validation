@@ -5,7 +5,7 @@ namespace Chocolatey.CCR.Rules
     using System.Linq;
     using chocolatey.infrastructure.rules;
 
-    public sealed class TagsMissingOrEmptyRule : CCRMetadataRuleBase
+    public sealed class TagsElementRules : CCRMetadataRuleBase
     {
         private const string CommaRuleId = "CPMR0014";
         private const string EmptyRuleId = "CPMR0023";

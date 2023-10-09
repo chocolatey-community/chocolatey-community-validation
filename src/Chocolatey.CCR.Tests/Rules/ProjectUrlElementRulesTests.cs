@@ -5,6 +5,7 @@ namespace Chocolatey.CCR.Tests.Rules
     using Chocolatey.CCR.Rules;
     using NUnit.Framework;
 
+    [Category("Requirements")]
     public class ProjectUrlElementRulesTests : RuleTestBase<ProjectUrlElementRules>
     {
         [Test]
