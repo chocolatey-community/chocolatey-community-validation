@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0026,
+    Id: CPMR0026,
+    Message: The description had a length of 4,060 characters. A description can not have a length of above 4,000 characters.,
+    Severity: Error
+  }
+]
