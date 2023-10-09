@@ -3,7 +3,8 @@
     chocolatey.infrastructure.rules.IMetadataRule: [
       Chocolatey.CCR.Rules.CopyrightCharacterCountTooLowRule,
       Chocolatey.CCR.Rules.DescriptionElementRules,
-      Chocolatey.CCR.Rules.ProjectUrlElementRules
+      Chocolatey.CCR.Rules.ProjectUrlElementRules,
+      Chocolatey.CCR.Rules.TagsMissingOrEmptyRule
     ],
     chocolatey.infrastructure.validations.IValidation: [
       Chocolatey.CCR.Validations.CommunityRepositoryPushValidation

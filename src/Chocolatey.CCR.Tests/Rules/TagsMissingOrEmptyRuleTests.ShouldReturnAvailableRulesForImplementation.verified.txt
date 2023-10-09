@@ -1,0 +1,8 @@
+﻿[
+  {
+    Severity: Error,
+    Id: CPMR0023,
+    Summary: Packages require at least one tag, and they must be separated by a space.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0023
+  }
+]
