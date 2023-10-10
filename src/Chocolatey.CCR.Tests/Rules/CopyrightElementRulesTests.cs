@@ -1,24 +1,41 @@
 namespace Chocolatey.CCR.Tests.Rules
 {
+    using System;
     using System.Globalization;
+    using System.Linq;
     using System.Threading.Tasks;
     using Chocolatey.CCR.Rules;
+    using FluentAssertions;
     using NUnit.Framework;
+    using static VerifyNUnit.Verifier;
 
-    public class TagsMissingOrEmptyRuleTests : RuleTestBase<TagsMissingOrEmptyRule>
+    [Category("Requirements")]
+    public class CopyrightElementRulesTests : RuleTestBase<CopyrightElementRules>
     {
         [TestCaseSource(nameof(EmptyTestValues))]
-        public async Task ShouldFlagEmptyTags(string tags)
+        [TestCase("a")]
+        [TestCase("abc")]
+        [TestCase("  uba   ")]
+        public async Task ShouldFlagWhenCopyrightIsBelow4Characters(string? copyright)
         {
-            var testContent = GetTestContent(tags);
+            var testContent = GetContent(copyright);
 
             await VerifyNuspec(testContent);
         }
 
-        [Test]
-        public async Task ShouldFlagMissingTagsElement()
+        [TestCase("2024")]
+        [TestCase("Copyright Someone")]
+        public async Task ShouldNotFlagWhenCopyrightIs4OrMoreCharacters(string copyright)
         {
-            const string testContent = @"<?xml version=""1.0"" encoding=""utf-8""?>
+            var testContent = GetContent(copyright);
+
+            await VerifyEmptyResults(testContent);
+        }
+
+        [Test]
+        public async Task ShouldNotFlagWhenCopyrightIsMissing()
+        {
+            var testContent = @"<?xml version=""1.0"" encoding=""utf-8""?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns=""http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"">
   <metadata>
@@ -33,18 +50,10 @@ namespace Chocolatey.CCR.Tests.Rules
   <files />
 </package>";
 
-            await VerifyNuspec(testContent);
-        }
-
-        [Test]
-        public async Task ShouldNotFlagWhenTagsIsNotEmpty()
-        {
-            var testContent = GetTestContent("some awesome tags");
-
             await VerifyEmptyResults(testContent);
         }
 
-        private static string GetTestContent(string? tags)
+        private static string GetContent(string? copyright)
         {
             const string format = @"<?xml version=""1.0"" encoding=""utf-8""?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
@@ -54,7 +63,7 @@ namespace Chocolatey.CCR.Tests.Rules
     <version>1.0.0</version>
     <authors>Author</authors>
     <packageSourceUrl>https://test-url.com/</packageSourceUrl>
-    <tags>{0}</tags>
+    <copyright>{0}</copyright>
     <dependencies>
       <dependency id=""basic"" />
     </dependencies>
@@ -62,7 +71,7 @@ namespace Chocolatey.CCR.Tests.Rules
   <files />
 </package>";
 
-            return string.Format(CultureInfo.InvariantCulture, format, tags);
+            return string.Format(CultureInfo.InvariantCulture, format, copyright);
         }
     }
 }
