@@ -7,7 +7,8 @@ namespace Chocolatey.CCR.Rules
 
     public sealed class IdElementRules : CCRMetadataRuleBase
     {
-        private const string RuleId = "CPMR0024";
+        private const string PreReleaseRuleId = "CPMR0024";
+        private const string ConfigRuleId = "CPMR0029";
 
         public override IEnumerable<RuleResult> Validate(global::NuGet.Packaging.NuspecReader reader)
         {
@@ -27,13 +28,19 @@ namespace Chocolatey.CCR.Rules
                 id.ContainsSafe("beta") ||
                 id.ContainsSafe("prerelease"))
             {
-                yield return GetRule(RuleId);
+                yield return GetRule(PreReleaseRuleId);
+            }
+
+            if (id.EndsWith(".config", StringComparison.OrdinalIgnoreCase))
+            {
+                yield return GetRule(ConfigRuleId);
             }
         }
 
         protected internal override IEnumerable<(RuleType severity, string? id, string summary)> GetRulesInformation()
         {
-            yield return (RuleType.Error, RuleId, "Package ID includes a prerelease version name.");
+            yield return (RuleType.Error, PreReleaseRuleId, "Package ID includes a prerelease version name.");
+            yield return (RuleType.Error, ConfigRuleId, "Package ID ends with the reserved suffix `.config`.");
         }
     }
 }

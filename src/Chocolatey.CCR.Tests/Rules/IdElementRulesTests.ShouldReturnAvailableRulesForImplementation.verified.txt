@@ -4,5 +4,11 @@
     Id: CPMR0024,
     Summary: Package ID includes a prerelease version name.,
     HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0024
+  },
+  {
+    Severity: Error,
+    Id: CPMR0029,
+    Summary: Package ID ends with the reserved suffix `.config`.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0029
   }
 ]

@@ -13,7 +13,9 @@ namespace Chocolatey.CCR.Tests.Rules
         [TestCase("beta-test")]
         [TestCase("prerelease")]
         [TestCase("my prerelease")]
-        public async Task ShouldFlagIdentifierWithPrereleaseName(string id)
+        [TestCase("my-package.CONFIG")]
+        [TestCase("pkg.config")]
+        public async Task ShouldFlagIdentifier(string id)
         {
             var testContent = GetTestContent(id);
 
