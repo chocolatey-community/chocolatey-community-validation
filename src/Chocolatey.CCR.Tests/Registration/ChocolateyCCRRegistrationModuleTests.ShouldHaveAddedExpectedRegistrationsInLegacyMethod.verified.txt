@@ -5,6 +5,7 @@
       Chocolatey.CCR.Rules.CopyrightElementRules,
       Chocolatey.CCR.Rules.DependenciesElementRules,
       Chocolatey.CCR.Rules.DescriptionElementRules,
+      Chocolatey.CCR.Rules.NuspecContainsEmailsRule,
       Chocolatey.CCR.Rules.ProjectUrlElementRules,
       Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules,
       Chocolatey.CCR.Rules.TagsElementRules

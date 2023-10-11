@@ -1,0 +1,134 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'id' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'version' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'packageSourceUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'owners' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'title' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'authors' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'projectUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'iconUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'copyright' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'licenseUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'projectSourceUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'docsUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'mailingListUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'bugTrackerUrl' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'tags' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'summary' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'description' contains 3 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'releaseNotes' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'language' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'provides' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'conflicts' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    Id: CPMR0020,
+    Message: The element 'replaces' contains 1 email(s). Emails should not be present in the Metadata file.,
+    Severity: Error
+  }
+]
