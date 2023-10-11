@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0030,
+    Id: CPMR0030,
+    Message: The description of the package contains invalid Markdown Headings.,
+    Severity: Error
+  }
+]

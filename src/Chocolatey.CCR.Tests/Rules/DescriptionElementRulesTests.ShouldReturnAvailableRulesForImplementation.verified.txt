@@ -10,5 +10,11 @@
     Id: CPMR0026,
     Summary: A description can not have a length of above 4,000 characters.,
     HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0026
+  },
+  {
+    Severity: Error,
+    Id: CPMR0030,
+    Summary: The description of the package contains invalid Markdown Headings.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0030
   }
 ]
