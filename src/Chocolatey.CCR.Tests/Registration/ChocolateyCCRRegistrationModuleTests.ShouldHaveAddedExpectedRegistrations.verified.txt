@@ -1,6 +1,7 @@
 ﻿{
   RegisteredServices: {
     chocolatey.infrastructure.rules.IMetadataRule: [
+      Chocolatey.CCR.Rules.AnyElementRules,
       Chocolatey.CCR.Rules.CopyrightElementRules,
       Chocolatey.CCR.Rules.DependenciesElementRules,
       Chocolatey.CCR.Rules.DescriptionElementRules,
