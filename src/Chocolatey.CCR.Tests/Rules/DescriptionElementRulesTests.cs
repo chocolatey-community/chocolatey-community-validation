@@ -1,6 +1,8 @@
 namespace Chocolatey.CCR.Tests.Rules
 {
+    using System.Collections;
     using System.Globalization;
+    using System.Linq;
     using System.Threading.Tasks;
     using Chocolatey.CCR.Rules;
     using NUnit.Framework;
@@ -8,6 +10,61 @@ namespace Chocolatey.CCR.Tests.Rules
     [Category("Requirements")]
     public class DescriptionElementRulesTests : RuleTestBase<DescriptionElementRules>
     {
+        public static IEnumerable InvalidHeaders
+        {
+            get
+            {
+                var prefixes = new[] { string.Empty, "\n\n\n" };
+
+                var headers = new[]
+                {
+                    "#Heading 1",
+                    "##Heading 2",
+                    "###Heading 3",
+                    "####Heading 4",
+                    "#####Heading 5",
+                    "######Heading 6"
+                };
+
+                return headers.SelectMany(h => prefixes.Select(p => p + h));
+            }
+        }
+        public static IEnumerable ValidHeaders
+        {
+            get
+            {
+                var prefixes = new[] { string.Empty, "\n\n\n" };
+
+                var headers = new[]
+                {
+                    "# Heading 1",
+                    "## Heading 2",
+                    "### Heading 3",
+                    "#### Heading 4",
+                    "##### Heading 5",
+                    "###### Heading 6"
+                };
+
+                return headers.SelectMany(h => prefixes.Select(p => p + h));
+            }
+        }
+
+        [TestCaseSource(nameof(InvalidHeaders))]
+        public async Task ShouldFlagWhenDescriptionContainsInvalidMarkdownHeaders(string description)
+        {
+            var testContent = GetTestContent(description);
+
+            await VerifyNuspec(testContent);
+        }
+
+        [TestCaseSource(nameof(ValidHeaders))]
+        public async Task ShouldNotFlagWhenDescriptionContainsValidMarkdownHeaders(string description)
+        {
+            var testContent = GetTestContent(description);
+
+            await VerifyEmptyResults(testContent);
+        }
+
         [Test]
         public async Task ShouldFlagWhenDescriptionElementIsNotPresent()
         {
