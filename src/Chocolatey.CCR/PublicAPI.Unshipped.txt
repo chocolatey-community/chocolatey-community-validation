@@ -14,6 +14,8 @@ Chocolatey.CCR.Rules.DependenciesElementRules
 Chocolatey.CCR.Rules.DependenciesElementRules.DependenciesElementRules() -> void
 Chocolatey.CCR.Rules.DescriptionElementRules
 Chocolatey.CCR.Rules.DescriptionElementRules.DescriptionElementRules() -> void
+Chocolatey.CCR.Rules.IdElementRules
+Chocolatey.CCR.Rules.IdElementRules.IdElementRules() -> void
 Chocolatey.CCR.Rules.NuspecContainsEmailsRule
 Chocolatey.CCR.Rules.NuspecContainsEmailsRule.NuspecContainsEmailsRule() -> void
 Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules
@@ -30,6 +32,7 @@ override Chocolatey.CCR.Rules.AnyElementRules.Validate(NuGet.Packaging.NuspecRea
 override Chocolatey.CCR.Rules.CopyrightElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.DependenciesElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.DescriptionElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.CCR.Rules.IdElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.NuspecContainsEmailsRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.RequireLicenseAcceptanceElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
 override Chocolatey.CCR.Rules.ProjectUrlElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
