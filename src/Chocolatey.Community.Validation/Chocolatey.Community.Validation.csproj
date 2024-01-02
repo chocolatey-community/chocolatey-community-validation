@@ -16,6 +16,10 @@
     <Configurations>Debug;Release;DebugOfficial;ReleaseOfficial</Configurations>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(TEAMCITY_VERSION)' != ''">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugOfficial|AnyCPU'">
     <DefineConstants>$(DefineConstants)DEBUG;FORCE_OFFICIAL_RELEASE</DefineConstants>
   </PropertyGroup>
