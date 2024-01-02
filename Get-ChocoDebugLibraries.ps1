@@ -72,7 +72,7 @@ function CheckoutTag {
     Pop-Location
 }
 
-[xml]$packagesConfigFile = Get-Content -Path "$PSScriptRoot/src/Chocolatey.CCR\Chocolatey.CCR.csproj"
+[xml]$packagesConfigFile = Get-Content -Path "$PSScriptRoot/src/Chocolatey.Community.Validation\Chocolatey.Community.Validation.csproj"
 
 $chocolateyLibPackageVersion = $($packagesConfigFile.Project.ItemGroup.PackageReference | Where-Object { $_.Include -eq "chocolatey.lib" }).Version
 

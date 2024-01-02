@@ -1,0 +1,19 @@
+﻿{
+  RegisteredServices: {
+    chocolatey.infrastructure.rules.IMetadataRule: [
+      Chocolatey.Community.Validation.Rules.AnyElementRules,
+      Chocolatey.Community.Validation.Rules.CopyrightElementRules,
+      Chocolatey.Community.Validation.Rules.DependenciesElementRules,
+      Chocolatey.Community.Validation.Rules.DescriptionElementRules,
+      Chocolatey.Community.Validation.Rules.IdElementRules,
+      Chocolatey.Community.Validation.Rules.NuspecContainsEmailsRule,
+      Chocolatey.Community.Validation.Rules.ProjectUrlElementRules,
+      Chocolatey.Community.Validation.Rules.RequireLicenseAcceptanceElementRules,
+      Chocolatey.Community.Validation.Rules.TagsElementRules
+    ],
+    chocolatey.infrastructure.validations.IValidation: [
+      Chocolatey.Community.Validation.Validations.CommunityRepositoryPushValidation
+    ]
+  },
+  RegistrationFailed: false
+}

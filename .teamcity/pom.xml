@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>Chocolatey CCR Extension Config DSL Script</name>
+  <name>Chocolatey Community Validation Config DSL Script</name>
   <groupId>Chocolatey</groupId>
-  <artifactId>ChocolateyCcrExtension</artifactId>
+  <artifactId>ChocolateyCommunityValidation</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>
