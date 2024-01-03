@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>chocolatey-community-validation</AssemblyName>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>true</IsPackable>
+    <LangVersion>8.0</LangVersion>
+    <AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <Deterministic>True</Deterministic>
+    <GenerateDocumentation>true</GenerateDocumentation>
+    <Configurations>Debug;Release;DebugOfficial;ReleaseOfficial</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TEAMCITY_VERSION)' != ''">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugOfficial|AnyCPU'">
+    <DefineConstants>$(DefineConstants)DEBUG;FORCE_OFFICIAL_RELEASE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseOfficial|AnyCPU'">
+    <Optimize>True</Optimize>
+    <DefineConstants>$(DefineConstants);FORCE_OFFICIAL_RELEASE;RELEASE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\SolutionVersion.cs" Link="SolutionVersion.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="chocolatey.lib" Version="2.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Target Name="OutputSolutionVersionMissing" BeforeTargets="Build" Condition="!Exists('$(SolutionDir)\SolutionVersion.cs')">
+    <Error Text="Run the 'Get-ChocoDebugLibraries.ps1' script before building solution." />
+  </Target>
+</Project>

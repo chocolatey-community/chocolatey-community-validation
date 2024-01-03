@@ -6,9 +6,9 @@
 
 Environment.SetVariableNames();
 
-var copyright = DateTime.Now.Year > 2023
-    ? string.Format("Copyright © 2023 - {0} Chocolatey Software, Inc. - All Rights Reserved", DateTime.Now.Year)
-    : "Copyright © 2023 Chocolatey Software, Inc. - All Rights Reserved";
+var copyright = DateTime.Now.Year > 2024
+    ? string.Format("Copyright © 2024 - {0} Chocolatey Software, Inc. - All Rights Reserved", DateTime.Now.Year)
+    : "Copyright © 2024 Chocolatey Software, Inc. - All Rights Reserved";
 
 Task("Prrepare-Chocolatey-Packages")
     .IsDependeeOf("Create-Chocolatey-Packages")
@@ -21,7 +21,7 @@ Task("Prrepare-Chocolatey-Packages")
     CleanDirectory(extensionDirectory);
     CleanDirectory(legalDirectory);
 
-    CopyFiles(BuildParameters.Paths.Directories.PublishedLibraries + "/chocolatey-ccr/net48/chocolatey-ccr.*", extensionDirectory);
+    CopyFiles(BuildParameters.Paths.Directories.PublishedLibraries + "/chocolatey-community-validation/net48/chocolatey-community-validation.*", extensionDirectory);
     // Placeholder until we know which license should be used for this repository
     //CopyFile(BuildParameters.RootDirectoryPath "/LICENSE.md", legalDirectory + "/LICENSE.md");
 
@@ -29,7 +29,7 @@ Task("Prrepare-Chocolatey-Packages")
 
     using (var algorithm = System.Security.Cryptography.SHA256.Create())
     {
-        var hashBytes = algorithm.ComputeHash(System.IO.File.ReadAllBytes(extensionDirectory + "/chocolatey-ccr.dll"));
+        var hashBytes = algorithm.ComputeHash(System.IO.File.ReadAllBytes(extensionDirectory + "/chocolatey-community-validation.dll"));
 
         foreach (var b in hashBytes)
         {
@@ -45,7 +45,7 @@ in verifying that this package's contents are trustworthy.
 The included files in this package is provided by Chocolatey Software Inc, and can not
 be downloaded outside of the package.
 
-The included binary library called chocolatey-ccr.dll is expected to have the following checksum associated with it:
+The included binary library called chocolatey-community-validation.dll is expected to have the following checksum associated with it:
 
 - Checksum: {0}
 - Checksum Type: {1}
@@ -67,7 +67,7 @@ Task("Prepare-NuGet-Packages")
     destinationDirectory = destinationDirectory.Combine("net48");
     EnsureDirectoryExists(destinationDirectory);
 
-    CopyFiles(BuildParameters.Paths.Directories.PublishedLibraries + "/chocolatey-ccr/net48/chocolatey-ccr.*", destinationDirectory);
+    CopyFiles(BuildParameters.Paths.Directories.PublishedLibraries + "/chocolatey-community-validation/net48/chocolatey-community-validation.*", destinationDirectory);
     // Placeholder until we know which license should be used for this repository
     //CopyFile(BuildParameters.RootDirectoryPath "/LICENSE.md", destinationDirectory + "/LICENSE.md");
 });
@@ -76,13 +76,13 @@ BuildParameters.SetParameters(
     context: Context,
     buildSystem: BuildSystem,
     sourceDirectoryPath: "./src",
-    solutionFilePath: "./src/chocolatey-ccr-extension.sln",
-    solutionDirectoryPath: "./src/Chocolatey.CCR",
-    title: "Chocolatey CCR Extension",
+    solutionFilePath: "./src/Chocolatey.Community.Validation.sln",
+    solutionDirectoryPath: "./src/Chocolatey.Community.Validation",
+    title: "Chocolatey Community Validation",
     repositoryOwner: "chocolatey",
-    repositoryName: "chocolatey-ccr-extension",
-    productName: "Chocolatey CCR Extension",
-    productDescription: "Chocolatey CCR Extension is a extension package implementing validation rules to be used together with Chocolatey Community Repository",
+    repositoryName: "chocolatey-community-validation",
+    productName: "Chocolatey Community Validation",
+    productDescription: "Chocolatey Community Validation is a extension package implementing validation rules to be used together with Chocolatey Community Repository",
     productCopyright: copyright,
     shouldStrongNameSignDependentAssemblies: false,
     treatWarningsAsErrors: true,

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <LangVersion>8.0</LangVersion>
+    <AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <Deterministic>True</Deterministic>
+    <OutputType>Exe</OutputType>
+    <Configurations>Debug;Release;DebugOfficial;ReleaseOfficial</Configurations>
+    <DisableFastUpToDateCheck>True</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SolutionVersion.cs" Link="SolutionVersion.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="Exists('..\..\lib\chocolatey\choco.exe')">
+    <None Include="..\..\lib\chocolatey\choco.exe" Link="choco.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\lib\chocolatey\choco.pdb" Link="choco.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- This reference is just to ensure that the extension is built first. -->
+    <ProjectReference Include="..\Chocolatey.Community.Validation\Chocolatey.Community.Validation.csproj">
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+
+  <Target Name="OutputSolutionVersionMissing" BeforeTargets="Build" Condition="!Exists('$(SolutionDir)\SolutionVersion.cs')">
+    <Error Text="Run the 'Get-ChocoDebugLibraries.ps1' script before building the solution." />
+  </Target>
+  <Target Name="SettingUp" AfterTargets="Build">
+    <PropertyGroup>
+      <DependencyDir>$(SolutionDir)\Chocolatey.Community.Validation\bin\$(Configuration)\$(TargetFramework)</DependencyDir>
+    </PropertyGroup>
+    <ItemGroup>
+      <FilesToDelete Include="$(Outdir)extensions\chocolatey-community-validation\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(OutputDir)extensions\chocolatey-community-validation" Condition="!Exists('$(OutDir)extensions\chocolatey-community-validation')" />
+    <Delete Files="@(FilesToDelete)" />
+    <Copy SourceFiles="$(DependencyDir)\chocolatey-community-validation.dll;$(DependencyDir)\chocolatey-community-validation.pdb" DestinationFolder="$(OutDir)extensions\chocolatey-community-validation" />
+  </Target>
+</Project>
