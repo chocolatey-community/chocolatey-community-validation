@@ -14,7 +14,7 @@
     <!-- Should there be a specific icon for the image. Maybe one used for all official extensions. -->
     <iconUrl>https://chocolatey.org/assets/images/nupkg/chocolateyicon.png</iconUrl>
     <copyright>(c) 2024 Chocolatey Software, Inc</copyright>
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+    <licenseUrl>REPLACE_WITH_LICENSE_URL</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
     <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
     <docsUrl>https://docs.chocolatey.org</docsUrl>

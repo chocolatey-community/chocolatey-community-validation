@@ -10,13 +10,15 @@ var copyright = DateTime.Now.Year > 2024
     ? string.Format("Copyright © 2024 - {0} Chocolatey Software, Inc. - All Rights Reserved", DateTime.Now.Year)
     : "Copyright © 2024 Chocolatey Software, Inc. - All Rights Reserved";
 
-Task("Prrepare-Chocolatey-Packages")
+Task("Prepare-Chocolatey-Packages")
     .IsDependeeOf("Create-Chocolatey-Packages")
+    .IsDependentOn("Copy-Nuspec-Folders")
     .IsDependentOn("Sign-Assemblies")
     .Does(() =>
 {
-    var extensionDirectory = BuildParameters.Paths.Directories.ChocolateyNuspecDirectory.Combine("extensions");
-    var legalDirectory = BuildParameters.Paths.Directories.ChocolateyNuspecDirectory.Combine("legal");
+    var nuspecDirectory = BuildParameters.Paths.Directories.ChocolateyNuspecDirectory;
+    var extensionDirectory = nuspecDirectory.Combine("extensions");
+    var legalDirectory = nuspecDirectory.Combine("legal");
 
     CleanDirectory(extensionDirectory);
     CleanDirectory(legalDirectory);
@@ -37,6 +39,13 @@ Task("Prrepare-Chocolatey-Packages")
         }
     }
 
+    var licenseUrl = string.Format(
+        "https://github.com/{0}/{1}/blob/{2}/LICENSE.txt",
+        BuildParameters.RepositoryOwner,
+        BuildParameters.RepositoryName,
+        BuildParameters.BuildProvider.Repository.Tag.IsTag ? BuildParameters.BuildProvider.Repository.Tag.Name : BuildParameters.BuildProvider.Repository.Branch
+    );
+
     var verificationText = string.Format(@"
 VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
@@ -50,11 +59,15 @@ The included binary library called chocolatey-community-validation.dll is expect
 - Checksum: {0}
 - Checksum Type: {1}
 
-The included 'LICENSE.md' file is obtainable from <INSERT_REPOSITORY_URL>",
+The included 'LICENSE.txt' file is obtainable from <{2}>",
         checksum.ToString(),
-        "SHA256");
+        "SHA256",
+        licenseUrl);
 
     FileWriteText(legalDirectory + "/VERIFICATION.txt", verificationText);
+    CopyFile(BuildParameters.RootDirectoryPath + "/LICENSE.txt", legalDirectory + "/LICENSE.txt");
+    
+    ReplaceTextInFiles(nuspecDirectory + "/*.nuspec", "REPLACE_WITH_LICENSE_URL", licenseUrl);
 });
 
 Task("Prepare-NuGet-Packages")
@@ -68,7 +81,7 @@ Task("Prepare-NuGet-Packages")
     EnsureDirectoryExists(destinationDirectory);
 
     CopyFiles(BuildParameters.Paths.Directories.PublishedLibraries + "/chocolatey-community-validation/net48/chocolatey-community-validation.*", destinationDirectory);
-    // Placeholder until we know which license should be used for this repository
+    CopyFile(BuildParameters.RootDirectoryPath + "/LICENSE.txt", destinationDirectory + "/LICENSE.txt");
     //CopyFile(BuildParameters.RootDirectoryPath "/LICENSE.md", destinationDirectory + "/LICENSE.md");
 });
 
