@@ -24,8 +24,6 @@ Task("Prepare-Chocolatey-Packages")
     CleanDirectory(legalDirectory);
 
     CopyFiles(BuildParameters.Paths.Directories.PublishedLibraries + "/chocolatey-community-validation/net48/chocolatey-community-validation.*", extensionDirectory);
-    // Placeholder until we know which license should be used for this repository
-    //CopyFile(BuildParameters.RootDirectoryPath "/LICENSE.md", legalDirectory + "/LICENSE.md");
 
     var checksum = new StringBuilder();
 
@@ -51,7 +49,7 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The included files in this package is provided by Chocolatey Software Inc, and can not
+The included files in this package is provided by Chocolatey Software Inc and its Community, and can not
 be downloaded outside of the package.
 
 The included binary library called chocolatey-community-validation.dll is expected to have the following checksum associated with it:
@@ -68,6 +66,7 @@ The included 'LICENSE.txt' file is obtainable from <{2}>",
     CopyFile(BuildParameters.RootDirectoryPath + "/LICENSE.txt", legalDirectory + "/LICENSE.txt");
     
     ReplaceTextInFiles(nuspecDirectory + "/*.nuspec", "REPLACE_WITH_LICENSE_URL", licenseUrl);
+    ReplaceTextInFiles(nuspecDirectory + "/*.nuspec", "REPLACE_WITH_COPYRIGHT", copyright);
 });
 
 Task("Prepare-NuGet-Packages")
@@ -75,14 +74,15 @@ Task("Prepare-NuGet-Packages")
     .IsDependentOn("Sign-Assemblies")
     .Does(() =>
 {
-    var destinationDirectory = BuildParameters.Paths.Directories.NuGetNuspecDirectory.Combine("lib");
+    var nuspecDirectory = BuildParameters.Paths.Directories.NuGetNuspecDirectory;
+    var destinationDirectory = nuspecDirectory.Combine("lib");
     CleanDirectory(destinationDirectory);
     destinationDirectory = destinationDirectory.Combine("net48");
     EnsureDirectoryExists(destinationDirectory);
 
     CopyFiles(BuildParameters.Paths.Directories.PublishedLibraries + "/chocolatey-community-validation/net48/chocolatey-community-validation.*", destinationDirectory);
     CopyFile(BuildParameters.RootDirectoryPath + "/LICENSE.txt", destinationDirectory + "/LICENSE.txt");
-    //CopyFile(BuildParameters.RootDirectoryPath "/LICENSE.md", destinationDirectory + "/LICENSE.md");
+    ReplaceTextInFiles(nuspecDirectory + "/*.nuspec", "REPLACE_WITH_COPYRIGHT", copyright);
 });
 
 BuildParameters.SetParameters(
@@ -92,7 +92,7 @@ BuildParameters.SetParameters(
     solutionFilePath: "./src/Chocolatey.Community.Validation.sln",
     solutionDirectoryPath: "./src/Chocolatey.Community.Validation",
     title: "Chocolatey Community Validation",
-    repositoryOwner: "chocolatey",
+    repositoryOwner: "chocolatey-community",
     repositoryName: "chocolatey-community-validation",
     productName: "Chocolatey Community Validation",
     productDescription: "Chocolatey Community Validation is a extension package implementing validation rules to be used together with Chocolatey Community Repository",
