@@ -4,20 +4,21 @@
   <metadata>
     <id>chocolatey-community-validation.extension</id>
     <version>0.0.1</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-community-validation</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <owners>Chocolatey Software</owners>
+    <owners>Chocolatey Software, Inc., Chocolatey Community</owners>
     <title>Chocolatey Community Validation Extension</title>
-    <authors>Chocolatey Software</authors>
+    <authors>Chocolatey Software, Inc., Chocolatey Community</authors>
     <!-- This needs to be a different URL once we have a public page for the extension -->
-    <projectUrl>https://community.chocolatey.org</projectUrl>
+    <projectUrl>https://github.com/chocolatey-community/chocolatey-community-validation</projectUrl>
+    <projectSourceUrl>https://github.com/chocolatey-community/chocolatey-community-validation</projectSourceUrl>
     <!-- Should there be a specific icon for the image. Maybe one used for all official extensions. -->
-    <iconUrl>https://chocolatey.org/assets/images/nupkg/chocolateyicon.png</iconUrl>
-    <copyright>(c) 2024 Chocolatey Software, Inc</copyright>
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <!-- <iconUrl>https://chocolatey.org/assets/images/nupkg/chocolateyicon.png</iconUrl> -->
+    <copyright>REPLACE_WITH_COPYRIGHT</copyright>
+    <licenseUrl>REPLACE_WITH_LICENSE_URL</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <docsUrl>https://docs.chocolatey.org</docsUrl>
+    <!-- <docsUrl>https://docs.chocolatey.org</docsUrl> -->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>chocolatey-community-Validation extension validation rules community-repository</tags>
     <summary>Extension implementing rules and validation for Chocolatey Community Repository packages</summary>
