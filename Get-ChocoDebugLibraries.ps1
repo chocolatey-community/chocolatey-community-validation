@@ -146,7 +146,7 @@ if (!$NoBuild) {
 
     Push-Location $ChocoSourceLocation
     if (Test-Path "recipe.cake") {
-        & ./build.debug.bat --target='Run-ILMerge' --shouldRunTests=false --shouldRunAnalyze=false
+        & ./build.debug.bat --target='Run-ILMerge' --shouldRunAnalyze=false --testExecutionType=none
     }
     else {
         & ./build.debug.bat
