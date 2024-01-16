@@ -67,9 +67,9 @@ object ChocolateyCommunityValidation : BuildType({
 
     features {
         pullRequests {
-            provider = gitlab {
+            provider = github {
                 authType = token {
-                    token = "%system.GitLabPAT%"
+                    token = "%system.GitHubPAT%"
                 }
             }
         }
