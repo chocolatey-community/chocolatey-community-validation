@@ -103,8 +103,9 @@ BuildParameters.SetParameters(
     //getFilesToObfuscate: getFilesToObfuscate
     preferDotNetGlobalToolUsage: !IsRunningOnWindows(),
     shouldRunNuGet: IsRunningOnWindows(),
-    shouldRunOpenCover: false, // We disable open cover as it does not work properly with VS2017 style projects.
-    shouldRunInspectCode: false // Current version of inspect code can not run against VS2017 style projects.
+    shouldRunOpenCover: false,   // We disable open cover as it does not work properly with VS2017 style projects.
+    shouldRunInspectCode: false, // Current version of inspect code can not run against VS2017 style projects.
+    shouldRunPSScriptAnalyzer: false
 );
 
 ToolSettings.SetToolSettings(context: Context);
