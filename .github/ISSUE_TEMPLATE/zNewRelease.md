@@ -1,9 +1,9 @@
---
+---
 name: Create new Release Template
 about: Use this template when starting to prepare a new release
 title: "Release: Chocolatey Community Validation v1.0.0"
-labels: Task
---
+labels: TaskItem, "2 - Working"
+---
 
 # Release Procedure
 
