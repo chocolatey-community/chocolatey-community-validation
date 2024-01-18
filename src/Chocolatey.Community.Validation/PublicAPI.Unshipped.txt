@@ -1,0 +1,42 @@
+#nullable enable
+abstract Chocolatey.Community.Validation.Rules.CCRMetadataRuleBase.GetRulesInformation() -> System.Collections.Generic.IEnumerable<(chocolatey.infrastructure.rules.RuleType severity, string? id, string! summary)>!
+Chocolatey.Community.Validation.Registration.ChocolateyCCRRegistrationModule
+Chocolatey.Community.Validation.Registration.ChocolateyCCRRegistrationModule.ChocolateyCCRRegistrationModule() -> void
+Chocolatey.Community.Validation.Registration.ChocolateyCCRRegistrationModule.RegisterDependencies(chocolatey.infrastructure.app.registration.IContainerRegistrator! registrator, chocolatey.infrastructure.app.configuration.ChocolateyConfiguration? configuration) -> void
+Chocolatey.Community.Validation.Registration.ChocolateyCCRRegistrationModule.register_dependencies(chocolatey.infrastructure.app.registration.IContainerRegistrator! registrator, chocolatey.infrastructure.app.configuration.ChocolateyConfiguration? configuration) -> void
+Chocolatey.Community.Validation.Rules.AnyElementRules
+Chocolatey.Community.Validation.Rules.AnyElementRules.AnyElementRules() -> void
+Chocolatey.Community.Validation.Rules.CCRMetadataRuleBase
+Chocolatey.Community.Validation.Rules.CCRMetadataRuleBase.CCRMetadataRuleBase() -> void
+Chocolatey.Community.Validation.Rules.CopyrightElementRules
+Chocolatey.Community.Validation.Rules.CopyrightElementRules.CopyrightElementRules() -> void
+Chocolatey.Community.Validation.Rules.DependenciesElementRules
+Chocolatey.Community.Validation.Rules.DependenciesElementRules.DependenciesElementRules() -> void
+Chocolatey.Community.Validation.Rules.DescriptionElementRules
+Chocolatey.Community.Validation.Rules.DescriptionElementRules.DescriptionElementRules() -> void
+Chocolatey.Community.Validation.Rules.IdElementRules
+Chocolatey.Community.Validation.Rules.IdElementRules.IdElementRules() -> void
+Chocolatey.Community.Validation.Rules.NuspecContainsEmailsRule
+Chocolatey.Community.Validation.Rules.NuspecContainsEmailsRule.NuspecContainsEmailsRule() -> void
+Chocolatey.Community.Validation.Rules.RequireLicenseAcceptanceElementRules
+Chocolatey.Community.Validation.Rules.RequireLicenseAcceptanceElementRules.RequireLicenseAcceptanceElementRules() -> void
+Chocolatey.Community.Validation.Rules.ProjectUrlElementRules
+Chocolatey.Community.Validation.Rules.ProjectUrlElementRules.ProjectUrlElementRules() -> void
+Chocolatey.Community.Validation.Rules.TagsElementRules
+Chocolatey.Community.Validation.Rules.TagsElementRules.TagsElementRules() -> void
+Chocolatey.Community.Validation.Validations.CommunityRepositoryPushValidation
+Chocolatey.Community.Validation.Validations.CommunityRepositoryPushValidation.CommunityRepositoryPushValidation(chocolatey.infrastructure.services.IRuleService! ruleService) -> void
+Chocolatey.Community.Validation.Validations.CommunityRepositoryPushValidation.Validate(chocolatey.infrastructure.app.configuration.ChocolateyConfiguration! config) -> System.Collections.Generic.ICollection<chocolatey.infrastructure.validations.ValidationResult!>!
+Chocolatey.Community.Validation.Validations.CommunityRepositoryPushValidation.validate(chocolatey.infrastructure.app.configuration.ChocolateyConfiguration! config) -> System.Collections.Generic.ICollection<chocolatey.infrastructure.validations.ValidationResult!>!
+override Chocolatey.Community.Validation.Rules.AnyElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.CopyrightElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.DependenciesElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.DescriptionElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.IdElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.NuspecContainsEmailsRule.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.RequireLicenseAcceptanceElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.ProjectUrlElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override Chocolatey.Community.Validation.Rules.TagsElementRules.Validate(NuGet.Packaging.NuspecReader! reader) -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.RuleResult!>!
+override sealed Chocolatey.Community.Validation.Rules.CCRMetadataRuleBase.GetRules() -> System.Collections.Generic.IEnumerable<chocolatey.infrastructure.rules.ImmutableRule>!
+static Chocolatey.Community.Validation.Rules.NuspecContainsEmailsRule.OutputFoundEmails.get -> bool
+static Chocolatey.Community.Validation.Rules.NuspecContainsEmailsRule.OutputFoundEmails.set -> void

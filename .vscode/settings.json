@@ -1,0 +1,10 @@
+{
+    "[powershell]": {
+        "files.encoding": "utf8bom",
+    },
+    "[bat]": {
+        // A bat file need to use the OEM encoding.
+        // As we typically work in English, this is the windows1252 encoding.
+        "files.encoding": "windows1252"
+    }
+}

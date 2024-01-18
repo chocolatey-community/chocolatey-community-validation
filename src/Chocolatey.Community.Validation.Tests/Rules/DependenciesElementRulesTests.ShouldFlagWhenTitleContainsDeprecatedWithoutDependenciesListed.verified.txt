@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0017,
+    Id: CPMR0017,
+    Message: A dependency is required for deprecated packages.,
+    Severity: Error
+  }
+]

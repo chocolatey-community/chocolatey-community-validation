@@ -1,0 +1,8 @@
+﻿[
+  {
+    Severity: Error,
+    Id: CPMR0020,
+    Summary: An Email Address should not be used in Metadata file.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020
+  }
+]

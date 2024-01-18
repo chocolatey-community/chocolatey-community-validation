@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Chocolatey.Community.Validation</id>
+    <title>Chocolatey Community Validation Library</title>
+    <version>0.0.1</version>
+    <authors>Chocolatey Software, Inc., Chocolatey Community</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/chocolatey-community/chocolatey-community-validation</projectUrl>
+    <tags>chocolatey-community-Validation extension validation rules community-repository</tags>
+    <summary>Library implementing rules and validation for Chocolatey Community Repository packages used together with Chocolatey CLI</summary>
+    <description>Chocolatey Community Validation Library - Bringing package validation to the console through Chocolatey CLI.
+
+The purpose of this extension is to provide validation and rules that needs to be adhered to when creating packages for the Chocolatey Community Repository.
+The implemented rules will run when creating a package, and when pushing a package to Chocolatey Community Repository.
+</description>
+    <!-- <releaseNotes>Summary of changes made in this release of the package.</releaseNotes> -->
+    <repository type="git" url="https://github.com/chocolatey-community/chocolatey-community-validation.git" />
+    <copyright>REPLACE_WITH_COPYRIGHT</copyright>
+    <dependencies>
+      <group targetFramework="net48">
+        <dependency id="chocolatey.lib" version="2.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

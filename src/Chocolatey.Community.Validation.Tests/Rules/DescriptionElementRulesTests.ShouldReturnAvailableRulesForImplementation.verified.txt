@@ -1,0 +1,26 @@
+﻿[
+  {
+    Severity: Error,
+    Id: CPMR0002,
+    Summary: A description of the package is either missing or empty.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0002
+  },
+  {
+    Severity: Error,
+    Id: CPMR0026,
+    Summary: A description can not have a length of above 4,000 characters.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0026
+  },
+  {
+    Severity: Error,
+    Id: CPMR0030,
+    Summary: The description of the package contains invalid Markdown Headings.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0030
+  },
+  {
+    Severity: Error,
+    Id: CPMR0032,
+    Summary: The description is not sufficient to explain the software.,
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0032
+  }
+]

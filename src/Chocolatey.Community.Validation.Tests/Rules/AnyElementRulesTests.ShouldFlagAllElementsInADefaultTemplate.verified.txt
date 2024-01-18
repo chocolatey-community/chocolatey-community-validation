@@ -1,0 +1,50 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'version' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'owners' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'authors' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'iconUrl' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'tags' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'summary' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'description' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  },
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019,
+    Id: CPMR0019,
+    Message: The element 'releaseNotes' contained a templated value. Templated values should not be present in the Metadata file.,
+    Severity: Error
+  }
+]

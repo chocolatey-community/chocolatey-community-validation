@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0029,
+    Id: CPMR0029,
+    Message: Package ID ends with the reserved suffix `.config`.,
+    Severity: Error
+  }
+]

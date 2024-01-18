@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0002,
+    Id: CPMR0002,
+    Message: A description of the package is either missing or empty.,
+    Severity: Error
+  }
+]
