@@ -41,7 +41,7 @@ Task("Prepare-Chocolatey-Packages")
         "https://github.com/{0}/{1}/blob/{2}/LICENSE.txt",
         BuildParameters.RepositoryOwner,
         BuildParameters.RepositoryName,
-        BuildParameters.BuildProvider.Repository.Tag.IsTag ? BuildParameters.BuildProvider.Repository.Tag.Name : BuildParameters.BuildProvider.Repository.Branch
+        BuildParameters.BuildProvider.Repository.Tag.IsTag ? BuildParameters.Version.Milestone : BuildParameters.BuildProvider.Repository.Branch
     );
 
     var verificationText = string.Format(@"
