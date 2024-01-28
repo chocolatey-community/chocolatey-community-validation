@@ -1,6 +1,6 @@
 ﻿[
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0007,
+    HelpUrl: https://ch0.co/rules/cpmr0007,
     Id: CPMR0007,
     Message: The license URL is absent, despite the requirement for license acceptance.,
     Severity: Error

@@ -1,132 +1,132 @@
 ﻿[
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'id' contained the emails 'bobbbbb@te.st'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'version' contained the emails 'abc@def.gh'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'packageSourceUrl' contained the emails 'package-source@test.com'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'owners' contained the emails 'owner@my-email.com'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'title' contained the emails 'Bob@test.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'authors' contained the emails 'bob@bob.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'projectUrl' contained the emails 'project@test.nz'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'iconUrl' contained the emails 'icon@bob.com'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'copyright' contained the emails 'bob@bob.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'licenseUrl' contained the emails 'bob@test.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'projectSourceUrl' contained the emails 'pkg-source@test.no'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'docsUrl' contained the emails 'bob@bob2.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'mailingListUrl' contained the emails 'bob@bob.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'bugTrackerUrl' contained the emails 'bob@bob.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'tags' contained the emails 'bobby@bob.no'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'summary' contained the emails 'BOB@test.com'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'description' contained the emails 'bob@bob.co.uk, lezy@workplace.com, someone@worker.no'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'releaseNotes' contained the emails 'awesome@user.com'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'language' contained the emails 'bob@bob.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'provides' contained the emails 'provides@test.com'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'conflicts' contained the emails 'bob+label@bob.co.uk'. Emails should not be present in the Metadata file.,
     Severity: Error
   },
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0020,
+    HelpUrl: https://ch0.co/rules/cpmr0020,
     Id: CPMR0020,
     Message: The element 'replaces' contained the emails 'bobby@bobtastic.ca'. Emails should not be present in the Metadata file.,
     Severity: Error

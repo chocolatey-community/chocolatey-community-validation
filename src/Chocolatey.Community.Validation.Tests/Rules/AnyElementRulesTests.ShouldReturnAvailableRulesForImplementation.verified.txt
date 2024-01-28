@@ -3,6 +3,6 @@
     Severity: Error,
     Id: CPMR0019,
     Summary: Templated values should not be present in Metadata file.,
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0019
+    HelpUrl: https://ch0.co/rules/cpmr0019
   }
 ]

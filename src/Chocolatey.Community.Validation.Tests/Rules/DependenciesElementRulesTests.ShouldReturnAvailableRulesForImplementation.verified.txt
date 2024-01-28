@@ -3,6 +3,6 @@
     Severity: Error,
     Id: CPMR0017,
     Summary: Deprecated packages must have a dependency.,
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0017
+    HelpUrl: https://ch0.co/rules/cpmr0017
   }
 ]
