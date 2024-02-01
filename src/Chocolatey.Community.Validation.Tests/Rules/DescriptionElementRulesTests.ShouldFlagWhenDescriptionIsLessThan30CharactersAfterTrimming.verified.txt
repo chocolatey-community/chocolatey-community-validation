@@ -1,6 +1,6 @@
 ﻿[
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0032,
+    HelpUrl: https://ch0.co/rules/cpmr0032,
     Id: CPMR0032,
     Message: The description has a length of 21 characters. A description should be sufficient to explain the software.,
     Severity: Error

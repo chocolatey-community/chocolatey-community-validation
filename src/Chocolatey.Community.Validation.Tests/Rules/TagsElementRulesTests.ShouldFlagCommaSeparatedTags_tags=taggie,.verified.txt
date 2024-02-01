@@ -1,6 +1,6 @@
 ﻿[
   {
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0014,
+    HelpUrl: https://ch0.co/rules/cpmr0014,
     Id: CPMR0014,
     Message: The tags have been separated by a comma; they must be separated by a space.,
     Severity: Error

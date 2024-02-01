@@ -3,12 +3,12 @@
     Severity: Error,
     Id: CPMR0014,
     Summary: The tags have been separated by a comma; they must be separated by a space.,
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0014
+    HelpUrl: https://ch0.co/rules/cpmr0014
   },
   {
     Severity: Error,
     Id: CPMR0023,
     Summary: Packages require at least one tag, and they must be separated by a space.,
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0023
+    HelpUrl: https://ch0.co/rules/cpmr0023
   }
 ]
