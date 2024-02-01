@@ -31,7 +31,7 @@ The implemented rules will run when creating a package, and when pushing a packa
 
 - Only metadata/nuspec rules are currently supported.
 </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>https://github.com/chocolatey-community/chocolatey-community-validation/releases/tags/$version$</releaseNotes>
 
     <dependencies>
       <!-- We only specify the minimum version, as even breaking changes in Chocolatey CLI is unlikely to relate to the usages in this package -->
