@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0062,
+    Id: CPMR0062,
+    Message: An open ended dependency on Chocolatey CLI was found. Ensure this was not added by a mistake.,
+    Severity: Note
+  }
+]

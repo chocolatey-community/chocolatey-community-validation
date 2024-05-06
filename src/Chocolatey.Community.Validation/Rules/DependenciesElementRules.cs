@@ -11,6 +11,7 @@ namespace Chocolatey.Community.Validation.Rules
     public sealed class DependenciesElementRules : CCRMetadataRuleBase
     {
         private const string DeprecatedNoDependencyRuleId = "CPMR0017";
+        private const string ChocolateyDependencyRuleId = "CPMR0062";
 
         public override IEnumerable<RuleResult> Validate(global::NuGet.Packaging.NuspecReader reader)
         {
@@ -26,11 +27,24 @@ namespace Chocolatey.Community.Validation.Rules
             {
                 yield return GetRule(DeprecatedNoDependencyRuleId, "A dependency is required for deprecated packages.");
             }
+
+            foreach (var dependency in dependencies)
+            {
+                if (dependency.Id.Equals("chocolatey", StringComparison.OrdinalIgnoreCase))
+                {
+                    var message = dependency.VersionRange.HasLowerBound || dependency.VersionRange.HasUpperBound ?
+                        "A dependency on Chocolatey CLI was found. Ensure that you use functionality that requires the specified version range of Chocolatey CLI." :
+                        "An open ended dependency on Chocolatey CLI was found. Ensure this was not added by a mistake.";
+
+                    yield return GetRule(ChocolateyDependencyRuleId, message);
+                }
+            }
         }
 
         protected internal override IEnumerable<(RuleType severity, string? id, string summary)> GetRulesInformation()
         {
             yield return (RuleType.Error, DeprecatedNoDependencyRuleId, "Deprecated packages must have a dependency.");
+            yield return (RuleType.Note, ChocolateyDependencyRuleId, "A dependency on Chocolatey CLI has been added.");
         }
     }
 }
