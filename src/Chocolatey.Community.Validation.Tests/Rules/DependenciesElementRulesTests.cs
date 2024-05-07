@@ -8,6 +8,18 @@ namespace Chocolatey.Community.Validation.Tests.Rules
     [Category("Requirements")]
     public class DependenciesElementRulesTests : RuleTestBase<DependenciesElementRules>
     {
+        [TestCase("chocolatey", null)]
+        [TestCase("chocolatey", "2.0.0")]
+        [TestCase("chocolatey", "[,2.0.0)")]
+        [TestCase("chocolatey", "[2.0.0, 3.0.0)")]
+        [TestCase("chocolatey", "[2.0.0,]")]
+        public async Task ShouldFlagDependencyOnChocolatey(string id, string version)
+        {
+            var testContent = GetTestContent("Test Package", (id, version));
+
+            await VerifyNuspec(testContent);
+        }
+
         [Test]
         public async Task ShouldFlagWhenTitleContainsDeprecatedWhileMissingDependenciesElement()
         {

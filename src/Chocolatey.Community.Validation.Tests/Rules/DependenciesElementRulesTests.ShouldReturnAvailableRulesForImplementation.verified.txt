@@ -4,5 +4,11 @@
     Id: CPMR0017,
     Summary: Deprecated packages must have a dependency.,
     HelpUrl: https://ch0.co/rules/cpmr0017
+  },
+  {
+    Severity: Note,
+    Id: CPMR0062,
+    Summary: A dependency on Chocolatey CLI has been added.,
+    HelpUrl: https://ch0.co/rules/cpmr0062
   }
 ]
