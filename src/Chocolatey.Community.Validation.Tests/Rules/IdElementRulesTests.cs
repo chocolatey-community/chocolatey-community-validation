@@ -7,6 +7,22 @@ namespace Chocolatey.Community.Validation.Tests.Rules
 
     public class IdElementRulesTests : RuleTestBase<IdElementRules>
     {
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase("some-id")]
+        [TestCase("something.portable")]
+        [TestCase("something.commandline")]
+        [TestCase("something.powershell")]
+        [TestCase("something.install")]
+        [TestCase("something.template")]
+        [TestCase("something.extension")]
+        public async Task ShouldNotFlagIdentifier(string id)
+        {
+            var testContent = GetTestContent(id);
+
+            await VerifyEmptyResults(testContent);
+        }
+
         [TestCase("testalpha")]
         [TestCase("test-ALPha")]
         [TestCase("testBETA")]
@@ -15,27 +31,18 @@ namespace Chocolatey.Community.Validation.Tests.Rules
         [TestCase("my prerelease")]
         [TestCase("my-package.CONFIG")]
         [TestCase("pkg.config")]
+        [TestCase("something.other")]
+        [TestCase("something.other.portable")]
+        [TestCase("different.something.commandline")]
+        [TestCase("something.other.powershell")]
+        [TestCase("something.other.install")]
+        [TestCase("something.other.template")]
+        [TestCase("something.other.extension")]
         public async Task ShouldFlagIdentifier(string id)
         {
             var testContent = GetTestContent(id);
 
             await VerifyNuspec(testContent);
-        }
-
-        [Test]
-        public async Task ShouldNotFlagIdentifierWithoutPrereleaseName()
-        {
-            var testContent = GetTestContent("some-id");
-
-            await VerifyEmptyResults(testContent);
-        }
-
-        [Test]
-        public async Task ShouldNotFlagAnEmptyIdentifier()
-        {
-            var testContent = GetTestContent(string.Empty);
-
-            await VerifyEmptyResults(testContent);
         }
 
         private static string GetTestContent(string? id)
