@@ -10,5 +10,11 @@
     Id: CPMR0029,
     Summary: Package ID ends with the reserved suffix `.config`.,
     HelpUrl: https://ch0.co/rules/cpmr0029
+  },
+  {
+    Severity: Note,
+    Id: CPMR0061,
+    Summary: Package ID contains dots (.), that is not part of the accepted suffixes.,
+    HelpUrl: https://ch0.co/rules/cpmr0061
   }
 ]

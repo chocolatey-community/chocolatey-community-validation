@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0061,
+    Id: CPMR0061,
+    Message: Package ID contains dots (.), that is not part of the accepted suffixes.,
+    Severity: Note
+  }
+]
