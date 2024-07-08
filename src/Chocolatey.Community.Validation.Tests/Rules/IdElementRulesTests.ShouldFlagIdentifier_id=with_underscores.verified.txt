@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0070,
+    Id: CPMR0070,
+    Message: Package ID contains underscores (_). Normally a Package ID is separated by dashes (-).,
+    Severity: Note
+  }
+]

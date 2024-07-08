@@ -10,6 +10,7 @@ namespace Chocolatey.Community.Validation.Rules
         private const string ConfigRuleId = "CPMR0029";
         private const string DotsInIdentifierRuleId = "CPMR0061";
         private const string PreReleaseRuleId = "CPMR0024";
+        private const string UnderscoreRuleId = "CPMR0070";
 
         public override IEnumerable<RuleResult> Validate(global::NuGet.Packaging.NuspecReader reader)
         {
@@ -37,6 +38,11 @@ namespace Chocolatey.Community.Validation.Rules
                 yield return GetRule(ConfigRuleId);
             }
 
+            if (id.IndexOf('_') >= 0)
+            {
+                yield return GetRule(UnderscoreRuleId);
+            }
+
             var subId = GetSubIdentifier(id);
 
             if (subId.IndexOf('.') > -1)
@@ -50,6 +56,7 @@ namespace Chocolatey.Community.Validation.Rules
             yield return (RuleType.Error, PreReleaseRuleId, "Package ID includes a prerelease version name.");
             yield return (RuleType.Error, ConfigRuleId, "Package ID ends with the reserved suffix `.config`.");
             yield return (RuleType.Note, DotsInIdentifierRuleId, "Package ID contains dots (.), that is not part of the accepted suffixes.");
+            yield return (RuleType.Note, UnderscoreRuleId, "Package ID contains underscores (_). Normally a Package ID is separated by dashes (-).");
         }
 
         private static string GetSubIdentifier(string id)
