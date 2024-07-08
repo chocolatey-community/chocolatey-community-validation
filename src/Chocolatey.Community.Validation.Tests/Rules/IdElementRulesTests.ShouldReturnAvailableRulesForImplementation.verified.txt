@@ -16,5 +16,11 @@
     Id: CPMR0061,
     Summary: Package ID contains dots (.), that is not part of the accepted suffixes.,
     HelpUrl: https://ch0.co/rules/cpmr0061
+  },
+  {
+    Severity: Note,
+    Id: CPMR0070,
+    Summary: Package ID contains underscores (_). Normally a Package ID is separated by dashes (-).,
+    HelpUrl: https://ch0.co/rules/cpmr0070
   }
 ]

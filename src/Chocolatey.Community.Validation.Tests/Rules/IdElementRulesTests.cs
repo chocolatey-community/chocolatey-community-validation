@@ -38,6 +38,7 @@ namespace Chocolatey.Community.Validation.Tests.Rules
         [TestCase("something.other.install")]
         [TestCase("something.other.template")]
         [TestCase("something.other.extension")]
+        [TestCase("with_underscores")]
         public async Task ShouldFlagIdentifier(string id)
         {
             var testContent = GetTestContent(id);
