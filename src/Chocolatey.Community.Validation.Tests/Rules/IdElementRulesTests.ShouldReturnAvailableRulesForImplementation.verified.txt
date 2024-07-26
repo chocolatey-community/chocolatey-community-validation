@@ -22,5 +22,11 @@
     Id: CPMR0070,
     Summary: Package ID contains underscores (_). Normally a Package ID is separated by dashes (-).,
     HelpUrl: https://ch0.co/rules/cpmr0070
+  },
+  {
+    Severity: Note,
+    Id: CPMR0069,
+    Summary: Package ID contains too many characters without being separated by a dash (-).,
+    HelpUrl: https://ch0.co/rules/cpmr0069
   }
 ]

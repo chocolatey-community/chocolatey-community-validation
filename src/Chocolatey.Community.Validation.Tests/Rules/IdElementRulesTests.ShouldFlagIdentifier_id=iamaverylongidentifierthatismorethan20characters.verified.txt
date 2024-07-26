@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0069,
+    Id: CPMR0069,
+    Message: Package ID contains 48 characters without being separated by a dash (-).,
+    Severity: Note
+  }
+]
