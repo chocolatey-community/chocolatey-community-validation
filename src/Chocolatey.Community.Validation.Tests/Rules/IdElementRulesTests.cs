@@ -16,6 +16,8 @@ namespace Chocolatey.Community.Validation.Tests.Rules
         [TestCase("something.install")]
         [TestCase("something.template")]
         [TestCase("something.extension")]
+        [TestCase("iamalongidentifier.extension")]
+        [TestCase("i-am-a-long-identifier-separated-by-dashes")]
         public async Task ShouldNotFlagIdentifier(string id)
         {
             var testContent = GetTestContent(id);
@@ -39,6 +41,9 @@ namespace Chocolatey.Community.Validation.Tests.Rules
         [TestCase("something.other.template")]
         [TestCase("something.other.extension")]
         [TestCase("with_underscores")]
+        [TestCase("iamaverylongidentifierthatismorethan20characters")]
+        [TestCase("i-haveasectionlongerthan20-characters.install")]
+        [TestCase("IAmALongeAlpha.CharacterThatMatches_Multiple_Rules.config")]
         public async Task ShouldFlagIdentifier(string id)
         {
             var testContent = GetTestContent(id);

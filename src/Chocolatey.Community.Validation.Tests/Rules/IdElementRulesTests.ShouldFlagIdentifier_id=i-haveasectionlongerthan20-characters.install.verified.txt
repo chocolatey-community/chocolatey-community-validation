@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0069,
+    Id: CPMR0069,
+    Message: Package ID contains 37 characters with one or more parts being more than 20 characters.,
+    Severity: Note
+  }
+]
