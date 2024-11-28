@@ -10,5 +10,11 @@
     Id: CPMR0023,
     Summary: Packages require at least one tag, and they must be separated by a space.,
     HelpUrl: https://ch0.co/rules/cpmr0023
+  },
+  {
+    Severity: Note,
+    Id: CPMR0067,
+    Summary: The tag 'notSilent' is being used.,
+    HelpUrl: https://ch0.co/rules/cpmr0067
   }
 ]

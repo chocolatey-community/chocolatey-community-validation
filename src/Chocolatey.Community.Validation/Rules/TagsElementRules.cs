@@ -9,6 +9,7 @@ namespace Chocolatey.Community.Validation.Rules
     {
         private const string CommaRuleId = "CPMR0014";
         private const string EmptyRuleId = "CPMR0023";
+        private const string NotSilentRuleId = "CPMR0067";
 
         public override IEnumerable<RuleResult> Validate(global::NuGet.Packaging.NuspecReader reader)
         {
@@ -27,12 +28,18 @@ namespace Chocolatey.Community.Validation.Rules
             {
                 yield return GetRule(CommaRuleId);
             }
+
+            if (tags.IndexOf("notSilent", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                yield return GetRule(NotSilentRuleId);
+            }
         }
 
         protected internal override IEnumerable<(RuleType severity, string? id, string summary)> GetRulesInformation()
         {
             yield return (RuleType.Error, CommaRuleId, "The tags have been separated by a comma; they must be separated by a space.");
             yield return (RuleType.Error, EmptyRuleId, "Packages require at least one tag, and they must be separated by a space.");
+            yield return (RuleType.Note, NotSilentRuleId, "The tag 'notSilent' is being used.");
         }
     }
 }

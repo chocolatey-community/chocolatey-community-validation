@@ -5,12 +5,14 @@ namespace Chocolatey.Community.Validation.Tests.Rules
     using Chocolatey.Community.Validation.Rules;
     using NUnit.Framework;
 
-    [Category("Requirements")]
     public class TagsElementRulesTests : RuleTestBase<TagsElementRules>
     {
-        [TestCase(",taggie")]
-        [TestCase("taggie,")]
-        [TestCase("tag1, tag2 tag3")]
+        [TestCase(",taggie", Category = "Requirements")]
+        [TestCase("taggie,", Category = "Requirements")]
+        [TestCase("tag1, tag2 tag3", Category = "Requirements")]
+        [TestCase("notSilent", Category = "Notes")]
+        [TestCase("notsilent", Category = "Notes")]
+        [TestCase("NOTSILENT", Category = "Notes")]
         public async Task ShouldFlagCommaSeparatedTags(string tags)
         {
             var testContent = GetTestContent(tags);
@@ -18,6 +20,7 @@ namespace Chocolatey.Community.Validation.Tests.Rules
             await VerifyNuspec(testContent);
         }
 
+        [Category("Requirements")]
         [TestCaseSource(nameof(EmptyTestValues))]
         public async Task ShouldFlagEmptyTags(string tags)
         {
@@ -27,6 +30,7 @@ namespace Chocolatey.Community.Validation.Tests.Rules
         }
 
         [Test]
+        [Category("Requirements")]
         public async Task ShouldFlagMissingTagsElement()
         {
             const string testContent = @"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -48,6 +52,7 @@ namespace Chocolatey.Community.Validation.Tests.Rules
         }
 
         [Test]
+        [Category("Requirements")]
         public async Task ShouldNotFlagTagsNotContainingAComma()
         {
             var testContent = GetTestContent("awesome-tag with space separated");
@@ -56,6 +61,7 @@ namespace Chocolatey.Community.Validation.Tests.Rules
         }
 
         [Test]
+        [Category("Requirements")]
         public async Task ShouldNotFlagWhenTagsIsNotEmpty()
         {
             var testContent = GetTestContent("some awesome tags");
