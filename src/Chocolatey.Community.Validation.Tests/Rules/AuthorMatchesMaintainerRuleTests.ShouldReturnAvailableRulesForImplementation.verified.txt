@@ -1,0 +1,8 @@
+﻿[
+  {
+    Severity: Note,
+    Id: CPMR0068,
+    Summary: The package maintainer field (owners) matches the software author field (authors) in the nuspec.,
+    HelpUrl: https://ch0.co/rules/cpmr0068
+  }
+]
