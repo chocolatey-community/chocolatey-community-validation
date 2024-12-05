@@ -10,5 +10,11 @@
     Id: CPMR0062,
     Summary: A dependency on Chocolatey CLI has been added.,
     HelpUrl: https://ch0.co/rules/cpmr0062
+  },
+  {
+    Severity: Error,
+    Id: CPMR0074,
+    Summary: Package has dependency on .hook package.,
+    HelpUrl: https://ch0.co/rules/cpmr0074
   }
 ]

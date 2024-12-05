@@ -12,6 +12,7 @@ namespace Chocolatey.Community.Validation.Rules
     {
         private const string DeprecatedNoDependencyRuleId = "CPMR0017";
         private const string ChocolateyDependencyRuleId = "CPMR0062";
+        private const string HookDependencyRuleId = "CPMR0074";
 
         public override IEnumerable<RuleResult> Validate(global::NuGet.Packaging.NuspecReader reader)
         {
@@ -38,6 +39,10 @@ namespace Chocolatey.Community.Validation.Rules
 
                     yield return GetRule(ChocolateyDependencyRuleId, message);
                 }
+                else if (dependency.Id.EndsWith(".hook", StringComparison.OrdinalIgnoreCase))
+                {
+                    yield return GetRule(HookDependencyRuleId, $"Package has dependency on {dependency.Id} package. Hook packages should not be defined as a dependency.");
+                }
             }
         }
 
@@ -45,6 +50,7 @@ namespace Chocolatey.Community.Validation.Rules
         {
             yield return (RuleType.Error, DeprecatedNoDependencyRuleId, "Deprecated packages must have a dependency.");
             yield return (RuleType.Note, ChocolateyDependencyRuleId, "A dependency on Chocolatey CLI has been added.");
+            yield return (RuleType.Error, HookDependencyRuleId, "Package has dependency on .hook package.");
         }
     }
 }
