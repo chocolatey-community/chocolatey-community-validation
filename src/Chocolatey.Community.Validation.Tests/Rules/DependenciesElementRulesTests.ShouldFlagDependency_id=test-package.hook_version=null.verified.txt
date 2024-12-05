@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0074,
+    Id: CPMR0074,
+    Message: Package has dependency on test-package.hook package. Hook packages should not be defined as a dependency.,
+    Severity: Error
+  }
+]
