@@ -2,6 +2,7 @@
   RegisteredServices: {
     chocolatey.infrastructure.rules.IMetadataRule: [
       Chocolatey.Community.Validation.Rules.AnyElementRules,
+      Chocolatey.Community.Validation.Rules.AuthorMatchesMaintainerRule,
       Chocolatey.Community.Validation.Rules.CopyrightElementRules,
       Chocolatey.Community.Validation.Rules.DependenciesElementRules,
       Chocolatey.Community.Validation.Rules.DescriptionElementRules,
