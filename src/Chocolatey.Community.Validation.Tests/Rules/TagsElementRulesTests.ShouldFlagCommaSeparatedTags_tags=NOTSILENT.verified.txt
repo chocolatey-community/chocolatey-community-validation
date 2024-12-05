@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0067,
+    Id: CPMR0067,
+    Message: The tag 'notSilent' is being used.,
+    Severity: Note
+  }
+]
