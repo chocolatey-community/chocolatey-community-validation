@@ -1,4 +1,4 @@
-# Chocolatey CCR Extension
+# Chocolatey Community Validation Extension
 
 This repository deals with how the implementation of validating rules valid for the Chocolatey Community Repository are implemented.
 This project is meant to be published as a Chocolatey CLI extension that users can install to validate their packages does not violate

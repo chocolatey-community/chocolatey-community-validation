@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0062,
+    Id: CPMR0062,
+    Message: A dependency on Chocolatey CLI was found. Ensure that you use functionality that requires the specified version range of Chocolatey CLI.,
+    Severity: Note
+  }
+]

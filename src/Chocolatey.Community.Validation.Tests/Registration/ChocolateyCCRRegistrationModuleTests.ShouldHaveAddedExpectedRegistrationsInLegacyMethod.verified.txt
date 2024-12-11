@@ -2,9 +2,11 @@
   RegisteredServices: {
     chocolatey.infrastructure.rules.IMetadataRule: [
       Chocolatey.Community.Validation.Rules.AnyElementRules,
+      Chocolatey.Community.Validation.Rules.AuthorMatchesMaintainerRule,
       Chocolatey.Community.Validation.Rules.CopyrightElementRules,
       Chocolatey.Community.Validation.Rules.DependenciesElementRules,
       Chocolatey.Community.Validation.Rules.DescriptionElementRules,
+      Chocolatey.Community.Validation.Rules.IconUrlElementRules,
       Chocolatey.Community.Validation.Rules.IdElementRules,
       Chocolatey.Community.Validation.Rules.NuspecContainsEmailsRule,
       Chocolatey.Community.Validation.Rules.ProjectUrlElementRules,

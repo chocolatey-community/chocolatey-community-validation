@@ -3,12 +3,30 @@
     Severity: Error,
     Id: CPMR0024,
     Summary: Package ID includes a prerelease version name.,
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0024
+    HelpUrl: https://ch0.co/rules/cpmr0024
   },
   {
     Severity: Error,
     Id: CPMR0029,
     Summary: Package ID ends with the reserved suffix `.config`.,
-    HelpUrl: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/cpmr0029
+    HelpUrl: https://ch0.co/rules/cpmr0029
+  },
+  {
+    Severity: Note,
+    Id: CPMR0061,
+    Summary: Package ID contains dots (.), that is not part of the accepted suffixes.,
+    HelpUrl: https://ch0.co/rules/cpmr0061
+  },
+  {
+    Severity: Note,
+    Id: CPMR0070,
+    Summary: Package ID contains underscores (_). Normally a Package ID is separated by dashes (-).,
+    HelpUrl: https://ch0.co/rules/cpmr0070
+  },
+  {
+    Severity: Note,
+    Id: CPMR0069,
+    Summary: Package ID contains too many characters without being separated by a dash (-).,
+    HelpUrl: https://ch0.co/rules/cpmr0069
   }
 ]

@@ -1,0 +1,8 @@
+﻿[
+  {
+    HelpUrl: https://ch0.co/rules/cpmr0076,
+    Id: CPMR0076,
+    Message: Icon URL uses a URL that is a GitHub raw URL.,
+    Severity: Error
+  }
+]

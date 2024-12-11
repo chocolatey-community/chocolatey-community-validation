@@ -12,6 +12,7 @@
     <OutputType>Exe</OutputType>
     <Configurations>Debug;Release;DebugOfficial;ReleaseOfficial</Configurations>
     <DisableFastUpToDateCheck>True</DisableFastUpToDateCheck>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\SolutionVersion.cs" Link="SolutionVersion.cs" />

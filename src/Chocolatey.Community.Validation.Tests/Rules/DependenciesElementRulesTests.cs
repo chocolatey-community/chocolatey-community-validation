@@ -8,6 +8,20 @@ namespace Chocolatey.Community.Validation.Tests.Rules
     [Category("Requirements")]
     public class DependenciesElementRulesTests : RuleTestBase<DependenciesElementRules>
     {
+        [TestCase("chocolatey", null)]
+        [TestCase("chocolatey", "2.0.0")]
+        [TestCase("chocolatey", "[,2.0.0)")]
+        [TestCase("chocolatey", "[2.0.0, 3.0.0)")]
+        [TestCase("chocolatey", "[2.0.0,]")]
+        [TestCase("test-package.hook", null)]
+        [TestCase("test-package.hook", "1.0.0")]
+        public async Task ShouldFlagDependency(string id, string version)
+        {
+            var testContent = GetTestContent("Test Package", (id, version));
+
+            await VerifyNuspec(testContent);
+        }
+
         [Test]
         public async Task ShouldFlagWhenTitleContainsDeprecatedWhileMissingDependenciesElement()
         {
@@ -53,6 +67,14 @@ namespace Chocolatey.Community.Validation.Tests.Rules
 </package>";
 
             await VerifyNuspec(testContent);
+        }
+
+        [Test]
+        public async Task ShouldNotFlagDependencyNotUsingCorrectHookExtension()
+        {
+            var testContent = GetTestContent("Test Package", ("test-package-hook", null));
+
+            await VerifyEmptyResults(testContent);
         }
 
         [Test]
