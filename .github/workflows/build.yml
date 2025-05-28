@@ -17,14 +17,14 @@ jobs:
         with:
           fetch-depth: 0
       - name: Cache Tools
-        uses: actions/cache@v3.0.11
+        uses: actions/cache@v4
         with:
           path: tools
           key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
       - name: Build with .NET Framework
         run: ./build.ps1 --verbosity=diagnostic --target=CI --testExecutionType=unit --shouldRunOpenCover=false
       - name: Upload Windows build results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: windows-build-results
