@@ -1,4 +1,4 @@
-#load nuget:?package=Chocolatey.Cake.Recipe&version=0.28.4
+#load nuget:?package=Chocolatey.Cake.Recipe&version=0.30.1
 
 ///////////////////////////////////////////////////////////////////////////////
 // RECIPE SCRIPT
@@ -64,7 +64,7 @@ The included 'LICENSE.txt' file is obtainable from <{2}>",
 
     FileWriteText(legalDirectory + "/VERIFICATION.txt", verificationText);
     CopyFile(BuildParameters.RootDirectoryPath + "/LICENSE.txt", legalDirectory + "/LICENSE.txt");
-    
+
     ReplaceTextInFiles(nuspecDirectory + "/*.nuspec", "REPLACE_WITH_LICENSE_URL", licenseUrl);
     ReplaceTextInFiles(nuspecDirectory + "/*.nuspec", "REPLACE_WITH_COPYRIGHT", copyright);
 });
